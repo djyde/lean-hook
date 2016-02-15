@@ -9,3 +9,5 @@ start.sh
 *.log
 
 _*
+
+access_token.*
