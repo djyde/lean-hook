@@ -7,6 +7,7 @@ var bodyParser = require('body-parser');
 var cloud = require('./cloud');
 
 var wechat = require('./routes/wechat')
+var uber = require('./routes/uber')
 
 var app = express();
 
@@ -23,6 +24,7 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
 
 app.use('/wechat', wechat)
+app.use('/uber', uber)
 
 // 未处理异常捕获 middleware
 app.use(function(req, res, next) {
